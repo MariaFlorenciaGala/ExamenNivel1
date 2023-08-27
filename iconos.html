@@ -6,26 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <link rel="shortcut icon" href="assets/img/favicon.png">
   <title>Iconos</title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+    name='viewport' />
   <!-- Íconos -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
   <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
   <link href="./assets/css/demo.css" rel="stylesheet" />
   <link href="./assets/css/challenge.css" rel="stylesheet" />
   <link href="./assets/css/styles.css" rel="stylesheet" />
-  <title>Demo de Íconos</title>
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 
 <body class="demo-icons">
+  <!--Header-->
   <header>
     <h1>Demo de Íconos</h1>
     <p>Hechos en
-      <a href="javascript:void(0)">svg</a>
+      <a
+        href="javascript:void(0);alert('SVG o Gráficos Vectoriales Escalables es un estándar web para definir gráficos basados en vectores en páginas web. Basado en XML, el estándar SVG proporciona marcado para describir rutas, formas y texto dentro de una ventana gráfica. El marcado se puede incrustar directamente en HTML para mostrarlo o guardarlo en un archivo .svg e insertarlo como cualquier otra imagen.')">svg</a>
     </p>
   </header>
+  <!--Fin del Header-->
+  
+  <!--Main-->
   <div id="icons-wrapper">
     <section>
       <ul>
@@ -432,47 +438,49 @@
       </ul>
     </section>
   </div>
+  <!--Fin del Main -->
 
-<!-- Scripts -->
-<script>
-  function SelectText(element) {
-    var doc = document,
-      text = element,
-      range, selection;
-    if (doc.body.createTextRange) {
-      range = document.body.createTextRange();
-      range.moveToElementText(text);
-      range.select();
-    } else if (window.getSelection) {
-      selection = window.getSelection();
-      range = document.createRange();
-      range.selectNodeContents(text);
-      selection.removeAllRanges();
-      selection.addRange(range);
-    }
-  }
-  window.onload = function() {
-    var iconsWrapper = document.getElementById('icons-wrapper'),
-      listItems = iconsWrapper.getElementsByTagName('li');
-    for (var i = 0; i < listItems.length; i++) {
-      listItems[i].onclick = function fun(event) {
-        var selectedTagName = event.target.tagName.toLowerCase();
-        if (selectedTagName == 'p' || selectedTagName == 'em') {
-          SelectText(event.target);
-        } else if (selectedTagName == 'input') {
-          event.target.setSelectionRange(0, event.target.value.length);
-        }
+  <!-- Scripts -->
+  <script>
+    function SelectText(element) {
+      var doc = document,
+        text = element,
+        range, selection;
+      if (doc.body.createTextRange) {
+        range = document.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+      } else if (window.getSelection) {
+        selection = window.getSelection();
+        range = document.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
       }
-
-      var charCharac = document.createElement('input');
-      charCharac.setAttribute('type', 'text');
-      charCharac.setAttribute('maxlength', '1');
-      charCharac.setAttribute('readonly', 'true');
-      charCharac.setAttribute('value', beforeContentChar);
-      listItems[i].appendChild(charCharac);
     }
-  }
-</script>
+    window.onload = function () {
+      var iconsWrapper = document.getElementById('icons-wrapper'),
+        listItems = iconsWrapper.getElementsByTagName('li');
+      for (var i = 0; i < listItems.length; i++) {
+        listItems[i].onclick = function fun(event) {
+          var selectedTagName = event.target.tagName.toLowerCase();
+          if (selectedTagName == 'p' || selectedTagName == 'em') {
+            SelectText(event.target);
+          } else if (selectedTagName == 'input') {
+            event.target.setSelectionRange(0, event.target.value.length);
+          }
+        }
+
+        var charCharac = document.createElement('input');
+        charCharac.setAttribute('type', 'text');
+        charCharac.setAttribute('maxlength', '1');
+        charCharac.setAttribute('readonly', 'true');
+        charCharac.setAttribute('value', beforeContentChar);
+        listItems[i].appendChild(charCharac);
+      }
+    }
+  </script>
+  <!--Fin del Script-->
 
 </body>
 
