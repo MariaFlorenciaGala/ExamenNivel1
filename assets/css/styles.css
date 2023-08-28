@@ -1,17 +1,63 @@
-.navbar.navbar-transparent {
-    position: absolute;
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto',sans-serif;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+.logo{
+    max-width: 200px;
+    height: auto;
+    align-items: center;
+    color:#ffffff;
+    display:inline;
+    font-size:24px;
+    font-weight:700;
+    line-height:36px;
+    margin:6.4px 0px;
 }
 
-.card {
-    background-color: #0b1011;
-    color: #fff;
+nav > div {
+    background-color: #3d50647b; 
 }
 
-.card img {
-    border-radius: 12px;
+.main {
+    flex: 1;
 }
 
-.img-thumbnail {
-    box-shadow: none;
-    background-color: transparent;
+.footer {
+    background-color: #f4f4f4;
+    padding: 1%;
 }
+#botones{
+    border:none;
+    background: #2266a5;
+    box-shadow: 6px 6px 10px -10px rgba(0, 0, 0, 0.15),
+    -6px -6px 20px -1px rgba(255, 255, 255, 0.7);
+}
+
+#colorPrimario{
+    color: #2266a5;
+}
+#btn-instagram{
+    border:none;
+    background: radial-gradient(
+        circle farthest-corner at 10% 75%,
+        rgba(255, 225, 125, 1) 0%,
+        rgba(255, 205, 105, 1) 12%,
+        rgba(250, 145, 55, 1) 25%,
+        rgba(235, 65, 65, 1) 40%,
+        transparent 75%
+    ),
+    linear-gradient(-15deg, rgba(35, 75, 215, 1) 20%, rgba(195, 60, 190, 1) 90%);
+    overflow: hidden;
+    animation: GradientBackground 5s ease infinite;
+}
+
+
+
