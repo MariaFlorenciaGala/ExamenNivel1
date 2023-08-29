@@ -25,24 +25,12 @@ body {
 nav > div {
     background-color: #3d50647b; 
 }
-
 .main {
     flex: 1;
 }
-
 .footer {
     background-color: #f4f4f4;
     padding: 1%;
-}
-#botones{
-    border:none;
-    background: #2266a5;
-    box-shadow: 6px 6px 10px -10px rgba(0, 0, 0, 0.15),
-    -6px -6px 20px -1px rgba(255, 255, 255, 0.7);
-}
-
-#colorPrimario{
-    color: #2266a5;
 }
 #btn-instagram{
     border:none;
